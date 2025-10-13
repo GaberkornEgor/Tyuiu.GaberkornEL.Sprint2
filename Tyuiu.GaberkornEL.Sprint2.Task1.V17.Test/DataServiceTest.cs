@@ -7,13 +7,20 @@ namespace Tyuiu.GaberkornEL.Sprint2.Task1.V17.Test
         [TestMethod]
         public void GetLogicOperationsValid()
         {
-            DataService ds = new DataService();
-            int a = 125, b = 123, c = 455, d = 321;
             bool[] res = new bool[6];
-            bool[] wait = { true, false, true, true, false };
-            res = ds.GetLogicOperations(a, b, c, d);
-            CollectionAssert.AreEqual(res, wait);
 
+            DataService ds = new DataService();
+
+            bool[] wait = new bool[6] { true, false, true, true, true, false };
+
+            int a = 135;
+            int b = 123;
+            int c = 455;
+            int d = 321;
+
+            res = ds.GetLogicOperations(a, b, c, d);
+
+            CollectionAssert.AreEqual(wait, res);
         }
     }
 }

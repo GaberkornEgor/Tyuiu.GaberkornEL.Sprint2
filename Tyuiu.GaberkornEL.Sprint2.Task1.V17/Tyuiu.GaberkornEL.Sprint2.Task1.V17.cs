@@ -11,12 +11,16 @@ namespace Tyuiu.GaberkornEL.Sprint2.Task1.V17
             Console.WriteLine("* Вариант #17                                                             *");
             Console.WriteLine("* Выполнил: Габеркорн Егор Леонидович | АСОиУб-25-1                       *");
             Console.WriteLine("***************************************************************************");
-            int a = 125, b = 123, c = 455, d = 321;
-            Console.WriteLine("a = {0}, b = {1}, c = {2}, d = {3}", a, b, c, d);
-            Console.WriteLine("* Результат:                                                              *");
+            DataService ds = new DataService();
+            int a = 135;
+            int b = 123;
+            int c = 455;
+            int d = 321;
+
+            bool[] res = ds.GetLogicOperations(a, b, c, d);
             for (int i = 0; i < 6; i++)
             {
-                Console.WriteLine(ds.GetLogicOperations(a, b, c, d)[i]);
+                Console.WriteLine(res[i]);
             }
         }
     }
