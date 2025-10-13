@@ -5,7 +5,7 @@ namespace Tyuiu.GaberkornEL.Sprint2.Task1.V17.Test
     public class DataServiceTest
     {
         [TestMethod]
-        public void TestMethod1()
+        public void GetLogicOperationsValid()
         {
             bool[] res = new bool[6];
 
