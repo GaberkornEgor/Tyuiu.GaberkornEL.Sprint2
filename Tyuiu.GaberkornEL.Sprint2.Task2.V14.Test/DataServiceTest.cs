@@ -1,11 +1,18 @@
-﻿namespace Tyuiu.GaberkornEL.Sprint2.Task2.V14.Test
+﻿using Tyuiu.GaberkornEL.Sprint2.Task2.V14.Lib;
+namespace Tyuiu.GaberkornEL.Sprint2.Task2.V14.Test
 {
     [TestClass]
-    public sealed class DataServiceTest
+    public class DataServiceTest
     {
         [TestMethod]
-        public void TestMethod1()
+        public void ValidCheckDotInShadedArea()
         {
+            DataService ds = new DataService();
+            int x = 3;
+            int y = 3;
+            var res = ds.CheckDotInShadedArea(x, y);
+            bool wait = true;
+            Assert.AreEqual(wait, res);
         }
     }
 }
