@@ -6,87 +6,160 @@ namespace Tyuiu.GaberkornEL.Sprint2.Task5.V8.Lib
         public string FindDateOfPreviousDay(int m, int n)
         {
             string res;
-            switch (n)
+            switch (m)
             {
                 case 1:
-                    if (m >= 2)
-                        res = (m - 1) + "." + "01";
+                    if (n > 1)
+                    {
+                        n--;
+                    }
                     else
-                        res = 31 + "." + "01";
+                    {
+                        n = 31;
+                    }
                     break;
-
                 case 2:
-                    if (m >= 2)
-                        res = (m - 1) + "." + "02";
+                    if (n > 1)
+                    {
+                        n--;
+                    }
                     else
-                        res = 31 + "." + "01";
+                    {
+                        n = 31;
+                    }
                     break;
                 case 3:
-                    if (m >= 2)
-                        res = (m - 1) + "." + "03";
+                    if (n > 1)
+                    {
+                        n--;
+                    }
                     else
-                        res = 28 + "." + "02";
+                    {
+                        n = 28;
+                    }
                     break;
                 case 4:
-                    if (m >= 2)
-                        res = (m - 1) + "." + "04";
+                    if (n > 1)
+                    {
+                        n--;
+                    }
                     else
-                        res = 31 + "." + "03";
+                    {
+                        n = 31;
+                    }
                     break;
                 case 5:
-                    if (m >= 2)
-                        res = (m - 1) + "." + "05";
+                    if (n > 1)
+                    {
+                        n--;
+                    }
                     else
-                        res = 30 + "." + "04";
+                    {
+                        n = 30;
+                    }
                     break;
                 case 6:
-                    if (m >= 2)
-                        res = (m - 1) + "." + "06";
+                    if (n > 1)
+                    {
+                        n--;
+                    }
                     else
-                        res = 31 + "." + "05";
+                    {
+                        n = 31;
+                    }
                     break;
                 case 7:
-                    if (m >= 2)
-                        res = (m - 1) + "." + "07";
+                    if (n > 1)
+                    {
+                        n--;
+                    }
                     else
-                        res = 30 + "." + "06";
+                    {
+                        n = 30;
+                    }
                     break;
                 case 8:
-                    if (m >= 2)
-                        res = ((m - 1) + "." + "08");
+                    if (n > 1)
+                    {
+                        n--;
+                    }
                     else
-                        res = 31 + "." + "07";
+                    {
+                        n = 31;
+                    }
                     break;
                 case 9:
-                    if (m >= 2)
-                        res = (m - 1) + "." + "09";
+                    if (n > 1)
+                    {
+                        n--;
+                    }
                     else
-                        res = 31 + "." + "08";
+                    {
+                        n = 31;
+                    }
                     break;
                 case 10:
-                    if (m >= 2)
-                        res = (m - 1) + "." + "10";
+                    if (n > 1)
+                    {
+                        n--;
+                    }
                     else
-                        res = 30 + "." + "09";
+                    {
+                        n = 30;
+                    }
                     break;
                 case 11:
-                    if (m >= 2)
-                        res = (m - 1) + "." + "11";
+                    if (n > 1)
+                    {
+                        n--;
+                    }
                     else
-                        res = 31 + "." + "10";
+                    {
+                        n = 31;
+                    }
                     break;
                 case 12:
-                    if (m >= 2)
-                        res = ((m - 1) + "." + "12");
+                    if (n > 1)
+                    {
+                        n--;
+                    }
                     else
-                        res = 30 + "." + "11";
+                    {
+                        n = 30;
+                    }
                     break;
-                default:
-                    throw new ArgumentException($"Месяц должен быть от 1 до 12. Значение{n}");
+
+
+
+
 
 
             }
-            return (res);
+            string x = Convert.ToString(n);
+            string y = Convert.ToString(m);
+            if (n < 10 && m < 10)
+            {
+                return "0" + x + '.' + "0" + y;
+
+            }
+            else
+            {
+                if (n < 10)
+                {
+                    return "0" + x + '.' + y;
+                }
+                else
+                {
+                    if (m < 10)
+                    {
+                        return x + "." + "0" + y;
+                    }
+                    else
+                    {
+                        return x + '.' + y;
+                    }
+                }
+            }
         }
     }
 }

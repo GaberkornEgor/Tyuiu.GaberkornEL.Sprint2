@@ -24,15 +24,15 @@ namespace Tyuiu.GaberkornEL.Sprint2.Task5.V8
             Console.WriteLine("* ИСХОДНЫЕ ДАННЫЕ:                                                        *");
             Console.WriteLine("***************************************************************************");
 
-            Console.WriteLine("Введите месяц:");
             int n = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("Введите число:");
             int m = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("***************************************************************************");
-            Console.WriteLine("*РЕЗУЛЬТАТ:                                                               *");
-            Console.WriteLine("***************************************************************************");
-            Console.WriteLine(ds.FindDateOfPreviousDay(m, n));
-            Console.ReadLine();
+            var res = ds.FindDateOfPreviousDay(n, m);
+
+
+            Console.WriteLine("*****************************************************");
+            Console.WriteLine("* РЕЗУЛЬТАТ:                                        *");
+            Console.WriteLine("*****************************************************");
+            Console.WriteLine("Результат:" + res);
 
         }
     }
