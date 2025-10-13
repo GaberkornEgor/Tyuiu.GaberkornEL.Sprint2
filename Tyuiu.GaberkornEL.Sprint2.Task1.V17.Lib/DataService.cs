@@ -1,4 +1,4 @@
-﻿using tyuiu.cources.programming.interfaces;
+﻿using System.Security.Cryptography;
 using tyuiu.cources.programming.interfaces.Sprint2;
 namespace Tyuiu.GaberkornEL.Sprint2.Task1.V17.Lib
 {
@@ -16,10 +16,6 @@ namespace Tyuiu.GaberkornEL.Sprint2.Task1.V17.Lib
             result[5] = (c <= d) ^ (a == b);
 
             return result;
-            /*  |, &, ||, &&, !, ^ 
-             (True, False, True, True, True, False)
-              a= 135, b = 123, c = 455, d = 321
-             */
         }
     }
 }
