@@ -6,58 +6,87 @@ namespace Tyuiu.GaberkornEL.Sprint2.Task5.V8.Lib
         public string FindDateOfPreviousDay(int m, int n)
         {
             string res;
-
             switch (n)
             {
                 case 1:
-                    res = "01";
+                    if (m >= 2)
+                        res = (m - 1) + "." + "01";
+                    else
+                        res = 31 + "." + "01";
                     break;
+
                 case 2:
-                    res = "02";
+                    if (m >= 2)
+                        res = (m - 1) + "." + "02";
+                    else
+                        res = 31 + "." + "01";
                     break;
                 case 3:
-                    res = "03";
+                    if (m >= 2)
+                        res = (m - 1) + "." + "03";
+                    else
+                        res = 28 + "." + "02";
                     break;
                 case 4:
-                    res = "04";
+                    if (m >= 2)
+                        res = (m - 1) + "." + "04";
+                    else
+                        res = 31 + "." + "03";
                     break;
                 case 5:
-                    res = "05";
+                    if (m >= 2)
+                        res = (m - 1) + "." + "05";
+                    else
+                        res = 30 + "." + "04";
                     break;
                 case 6:
-                    res = "06";
+                    if (m >= 2)
+                        res = (m - 1) + "." + "06";
+                    else
+                        res = 31 + "." + "05";
                     break;
                 case 7:
-                    res = "07";
+                    if (m >= 2)
+                        res = (m - 1) + "." + "07";
+                    else
+                        res = 30 + "." + "06";
                     break;
                 case 8:
-                    res = "08";
+                    if (m >= 2)
+                        res = ((m - 1) + "." + "08");
+                    else
+                        res = 31 + "." + "07";
                     break;
                 case 9:
-                    res = "09";
+                    if (m >= 2)
+                        res = (m - 1) + "." + "09";
+                    else
+                        res = 31 + "." + "08";
                     break;
                 case 10:
-                    res = "10";
+                    if (m >= 2)
+                        res = (m - 1) + "." + "10";
+                    else
+                        res = 30 + "." + "09";
                     break;
                 case 11:
-                    res = "11";
+                    if (m >= 2)
+                        res = (m - 1) + "." + "11";
+                    else
+                        res = 31 + "." + "10";
                     break;
                 case 12:
-                    res = "12";
+                    if (m >= 2)
+                        res = ((m - 1) + "." + "12");
+                    else
+                        res = 30 + "." + "11";
                     break;
                 default:
-                    throw new ArgumentException($"Месяц должен быть от 1 до 12. Значение {n}");
+                    throw new ArgumentException($"Месяц должен быть от 1 до 12. Значение{n}");
+
 
             }
-            if ((m > 1) && (m < 32))
-            {
-                m = m - 1;
-            }
-            else
-            {
-                Console.WriteLine("Число дня задано некорректно. Введите число от 2 до 31");
-            }
-            return m + "." + res;
+            return (res);
         }
     }
 }
