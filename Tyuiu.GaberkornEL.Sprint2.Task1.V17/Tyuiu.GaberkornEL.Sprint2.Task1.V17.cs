@@ -16,7 +16,7 @@ namespace Tyuiu.GaberkornEL.Sprint2.Task1.V17
             Console.WriteLine("* Результат:                                                              *");
             for (int i = 0; i < 6; i++)
             {
-                Console.WriteLine(ds.GetLogicOperations(a,b,c,d)[i]);
+                Console.WriteLine(ds.GetLogicOperations(a, b, c, d)[i]);
             }
         }
     }
