@@ -5,48 +5,59 @@ namespace Tyuiu.GaberkornEL.Sprint2.Task5.V8.Lib
     {
         public string FindDateOfPreviousDay(int m, int n)
         {
-            
             string res;
-            switch (m)
+
+            switch (n)
             {
                 case 1:
-                    switch (n)
-                    {
-                        case 1:
-                            m = 31;
-                            n = 12;
-                            break;
-                        default:
-                            n = n - 1;
-                            switch (n)
-                            {
-                                case 1:
-                                case 3:
-                                case 5:
-                                case 7:
-                                case 8:
-                                case 10:
-                                    m = 31;
-                                    break;
-                                case 2:
-                                    m = 28;
-                                    break;
-                                default:
-                                    m = 30;
-                                    break;
-                            }
-                            break;
-                    }
+                    res = "01";
+                    break;
+                case 2:
+                    res = "02";
+                    break;
+                case 3:
+                    res = "03";
+                    break;
+                case 4:
+                    res = "04";
+                    break;
+                case 5:
+                    res = "05";
+                    break;
+                case 6:
+                    res = "06";
+                    break;
+                case 7:
+                    res = "07";
+                    break;
+                case 8:
+                    res = "08";
+                    break;
+                case 9:
+                    res = "09";
+                    break;
+                case 10:
+                    res = "10";
+                    break;
+                case 11:
+                    res = "11";
+                    break;
+                case 12:
+                    res = "12";
                     break;
                 default:
-                    m = m - 1;
-                    break;
+                    throw new ArgumentException($"Месяц должен быть от 1 до 12. Значение {n}");
+
             }
-            res = ($"{m}.0{n}");  
-            return res;
-
-
-
+            if ((m > 1) && (m < 32))
+            {
+                m = m - 1;
+            }
+            else
+            {
+                Console.WriteLine("Число дня задано некорректно. Введите число от 2 до 31");
+            }
+            return m + "." + res;
         }
     }
 }
