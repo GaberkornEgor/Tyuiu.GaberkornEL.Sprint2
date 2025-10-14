@@ -8,8 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Tyuiu.GaberkornEL.Sprint2.Task1.V17.Lib\Tyuiu.GaberkornEL.Sprint2.Task1.V17.Lib.csproj" />
-    <ProjectReference Include="..\Tyuiu.GaberkornEL.Sprint2.Task1.V17.Lib\Tyuiu.GaberkornEL.Sprint2.Task1.V17.Lib.csproj" />
+    <ProjectReference Include="..\Tyuiu.GaberkornEL.Sprint2.Task7.V12.Lib\Tyuiu.GaberkornEL.Sprint2.Task7.V12.Lib.csproj" />
   </ItemGroup>
 
 </Project>
