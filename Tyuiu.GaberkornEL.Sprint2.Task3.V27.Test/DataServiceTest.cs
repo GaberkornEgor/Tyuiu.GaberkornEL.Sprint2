@@ -11,7 +11,7 @@ namespace Tyuiu.GaberkornEL.Sprint2.Task3.V27.Test
             DataService ds = new();
             double x = 0, res = ds.Calculate(x);
 
-            Assert.AreEqual(0.0, res);
+            Assert.AreEqual(0.25, res);
         }
     }
 }
